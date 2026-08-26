@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-// const basePath = "/Heap-of-Foods-Recipe-Book";
+const basePath = "/Heap-of-Foods-Recipe-Book-chinese";
 
 const nextConfig: NextConfig = {
   output: "export",
