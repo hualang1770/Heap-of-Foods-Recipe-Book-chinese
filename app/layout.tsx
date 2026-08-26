@@ -9,10 +9,9 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { ThemeInitializer } from "@/components/ThemeInitializer";
 import "./globals.css";
 import { useTranslation } from "@/lib/i18n";
+import { getAssetPath } from "@/lib/paths";
 
 config.autoAddCss = false;
-
-const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -40,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Heap of Foods",
     images: [
       {
-        url: "/icons/misc/icon_hof.png",
+        url: getAssetPath("/icons/misc/icon_hof.png"),
         width: 512,
         height: 512,
         alt: "Heap of Foods",
@@ -53,16 +52,16 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Heap of Foods",
     description: "A complete recipes sheet for the Heap of Foods Mod! Discover and look up recipes and ingredients easily.",
-    images: ["/icons/misc/icon_hof.png"],
+    images: [getAssetPath("/icons/misc/icon_hof.png")],
   },
   icons: {
     icon: [
-      { url: `${base}/icons/misc/icon_hof.png?v=2`, sizes: "16x16", type: "image/png" },
-      { url: `${base}/icons/misc/icon_hof.png?v=2`, sizes: "32x32", type: "image/png" },
-      { url: `${base}/icons/misc/icon_hof.png?v=2`, sizes: "48x48", type: "image/png" }
+      { url: `${getAssetPath("/icons/misc/icon_hof.png")}?v=2`, sizes: "16x16", type: "image/png" },
+      { url: `${getAssetPath("/icons/misc/icon_hof.png")}?v=2`, sizes: "32x32", type: "image/png" },
+      { url: `${getAssetPath("/icons/misc/icon_hof.png")}?v=2`, sizes: "48x48", type: "image/png" }
     ],
     apple: [
-      { url: "/icons/misc/icon_hof.png", sizes: "180x180", type: "image/png" }
+      { url: getAssetPath("/icons/misc/icon_hof.png"), sizes: "180x180", type: "image/png" }
     ],
   },
 };
